@@ -13,6 +13,9 @@ def dividir(a,b):
     else:
         print("Syntax error(No se puede dividir por cero)")
 
+def potenciar(a,b):
+    return a ** b
+
 def operacion_a_hacer(eleccion, a, b):
     match eleccion:
         case 1:
@@ -23,10 +26,12 @@ def operacion_a_hacer(eleccion, a, b):
            print(multiplicar(a,b))
         case 4:
             print(dividir(a,b))
+        case 5:
+            print(potenciar(a,b))
         case _:
             print("Seleccione una opcion valida")
 
 a=float(input("Cual es el primer numero a operar "))
 b=float(input("Cual es el segundo numero a operar "))
-eleccion = int(input("¿Qué operación vas a realizar?\n1 - Sumar\n2 - Restar\n3 - Multiplicar\n4 - Dividir\n> "))
+eleccion = int(input("¿Qué operación vas a realizar?\n1 - Sumar\n2 - Restar\n3 - Multiplicar\n4 - Dividir\n5- Potenciar \n> "))
 operacion_a_hacer(eleccion, a, b)
